@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  
+  
+}
+
+body {
+  
+  background-color: #000;
+  background-image: url('/wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+}
+
+main {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+.container {
+  width: 400px;
+  margin: 50px auto;
+  background-color: rgba(255, 95, 100, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#login-box {
+  position: relative;
+  overflow: hidden;
+  height: 346px;
+  margin-top:0px;
+  transition: 
+    display 0.2s,
+    height 0.2s,
+    margin-bottom 0.01s,
+    padding-top 0.2s,
+    padding-bottom 0.2s;
+    
+}
+
+#login-box.close {
+  height: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  
+}
+
+#register-box {
+  overflow: hidden;
+  height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  
+  padding-bottom: 0px;
+  transition: 
+    height 0.2s,
+    margin-top 0.2s;
+}
+
+#register-box.open {
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  top: 0;
+  height: 429px;
+}
+
+h1 {
+  text-align: center;
+  
+}
+
+#loginHeader {
+  text-align: left;
+  color: white;
+  padding: 0 2rem;
+}
+
+.h1logres {
+  color: rgba(255, 255, 255, 1);
+}
+
+a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: darkorange;
+  transform: scale(1.03, 1.03);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+

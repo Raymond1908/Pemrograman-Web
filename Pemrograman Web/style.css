@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  /*border: 2px solid red;*/
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  background-image: url('wallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background-image 1s ease-in-out;
+  
+}
+
+main {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  /*border: 2px solid red;*/
+}
+
+li {
+  list-style: none;
+  transition: transform 0.2s;
+}
+li:hover {
+  transform: scale(1.02, 1.02);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+a:hover {
+  color: darkorange;
+  transform: scale(1.03, 1.03);
+}
+
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 10, 10, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.navbar .links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  align-items: center;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s; /*waktu transisi togle_btn*/
+}
+
+.toggle_btn:hover { /*tujuan transisi togglebtn ketika hover*/
+  transform: scale(1.02, 1.02);
+}
+
+i {
+  display: flex;
+  margin-right: 160px;
+}
+
+.dropdown_menu {
+  position: fixed;
+  right: 4.5rem;
+  top: 0px;
+  height: 0;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 
+    height 0.2s cubic-bezier(.17, .67, .83, .67),
+    top 0.4s ease-out;
+  z-index: 9;
+  
+}
+
+.dropdown_menu.open {
+  top: 60px;
+  height: 162px;
+  transform: translate();
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* sign*/
+#get-started-btn {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+}
+
+#get-started-btn:hover {
+background-color: #aaa;
+}
+
+section {
+  display: flex;
+  position: relative;
+  /*border: 2px solid red;*/
+  /*height: calc(100vh - 60px);*/
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.35s ease-in;
+}
+
+section > div:first-child {
+  margin-top: 60px; /*activate margin-top because of flex display;*/
+}
+
+.beranda-container,
+.tentang-container,
+.anggota-container {
+  position: relative;
+  background-color: rgba(110, 110, 110, 0.2);
+  backdrop-filter: blur(10px);
+  width: 85%;
+  border: none;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.beranda-container {
+  flex-wrap: wrap;
+  display: flex;
+  padding: 4rem;
+}
+
+.beranda-container .beranda-content {
+  flex: 1; 
+  padding: 4rem;
+}
+
+.beranda-container .beranda-image {
+  flex: 0 0 auto; 
+  padding: 4rem;
+}
+
+.beranda-container h1{
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.beranda-container p{
+  text-align: left;
+  font-size: 14pt;
+  justify-content: left;
+}
+
+.beranda-container img{
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+}
+
+.tentang-container h1{
+  font-weight: bold;
+  font-size: 24pt;
+}
+
+.tentang-container a{
+  font-weight: bold;
+  font-size: 24pt;
+  color: blue;
+}
+
+.tentang-container p{
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14pt;
+  justify-content: left;
+}
+
+/* Lanjut Bravio */
+
+#anggota {
+  position: relative;
+}
+
+#anggota h2 {
+  font-weight: bold;
+  font-size: 36pt;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#anggota h3 {
+  font-weight: bold;
+  font-size: 24pt;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#anggota p, #anggota a {
+  margin-top: 50px;
+  font-size: 18pt;
+}
+
+.anggota-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mySlides {
+  display: none;
+  animation-duration: 3s;
+  width: 100%;
+}
+
+.image-container { /*gambar pada slide anggota*/
+  float: left;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  animation-duration: 2s; /*durasi animasi gambar anggota*/
+}
+
+.bio-container {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+.bio-container h3 {
+  margin-top: 1rem;
+}
+
+.arrow-buttons {
+  position: absolute;
+  top: 105%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.2rem;
+}
+
+.arrow-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: 
+    color 0.2s,
+    filter 0.2s;
+}
+
+.arrow-button:hover {
+  color: #e6e6e6;
+  filter: drop-shadow(0px 0px 2px darkorange);
+}
+
+.arrow-button:focus {
+  outline: none;
+  
+}
+
+
+.fa-chevron-left,
+.fa-chevron-right {
+  margin-top: 0.25rem;
+}
+
+
+@media (max-width: 992px) {
+  .navbar-links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar .links {
+    display: none;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 5px;
+  }
+
+  .beranda-container,
+  .tentang-container,
+  .anggota-container {
+    padding: 2rem;
+  }
+}
+
+/*animasi*/
+@keyframes slideAnimationKanan{
+  0% {opacity: 0; right: 300px}
+  100% {opacity: 1; right: 0px}
+}
+
+@keyframes slideAnimationKiri{
+  0% {opacity: 0; left: 300px}
+  100% {opacity: 1; left: 0px}
+}
+
+
