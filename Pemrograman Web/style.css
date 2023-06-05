@@ -4,12 +4,10 @@
   border: 0;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  /*border: 2px solid red;*/
 }
 
 body {
   height: 100vh;
-  width: 100vw;
   background-color: #000;
   background-image: url('wallpaper.png');
   background-size: cover;
@@ -20,10 +18,7 @@ body {
 }
 
 main {
-  position: relative;
-  margin-top: 60px;
-  width: 100%;
-  /*border: 2px solid red;*/
+  margin-top: 200px;
 }
 
 li {
@@ -155,13 +150,9 @@ background-color: #aaa;
 }
 
 section {
+  height: calc(100vh - 60px);
   display: flex;
-  position: relative;
-  /*border: 2px solid red;*/
-  /*height: calc(100vh - 60px);*/
-  width: 100%;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -170,9 +161,8 @@ section {
   transition: opacity 0.35s ease-in;
 }
 
-section > div:first-child {
-  margin-top: 60px; /*activate margin-top because of flex display;*/
-}
+
+
 
 .beranda-container,
 .tentang-container,
@@ -221,12 +211,6 @@ section > div:first-child {
 .tentang-container h1{
   font-weight: bold;
   font-size: 24pt;
-}
-
-.tentang-container a{
-  font-weight: bold;
-  font-size: 24pt;
-  color: blue;
 }
 
 .tentang-container p{
@@ -304,7 +288,7 @@ section > div:first-child {
   position: absolute;
   top: 105%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 120%;
   display: flex;
   justify-content: space-between;
   align-items: center;

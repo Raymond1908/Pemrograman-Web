@@ -64,7 +64,7 @@ window.addEventListener("scroll", toggleOpacity);
 const getStartedBtn = document.getElementById("get-started-btn");
 
 getStartedBtn.addEventListener("click", function() {
-  window.location.href = "login/halamanlogin.html";
+  window.location.href = "login/halamanlogin.php";
 });
 
 /* transisi anggota */
