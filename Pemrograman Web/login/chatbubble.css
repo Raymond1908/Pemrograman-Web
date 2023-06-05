@@ -8,7 +8,7 @@
 body {
   height: 100vh;
   background-color: #000;
-  background-image: url('/wallpaper.png');
+  background-image: url('wallpaper.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -19,30 +19,16 @@ body {
 }
 
 main {
-  display: block;
-  position: relative;
-  
-  width: 100%;
-  height: calc(100vh - 60px);
-  top: 60px;
-  margin-top: 60px auto 0px;
-  /*padding: 20px;*/
-  
-  
-  justify-content: space-between;
-  /*margin-top: 20px;*/
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 header {
-  /*
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  */
-  position: relative;
-  padding: 0 2rem;
 }
 
 .navbar {
@@ -130,80 +116,87 @@ a {
   color: #888;
 }
 
-.Percakapan {
-  display: inline-block;
-  position: absolute;
-  overflow-y: auto;
-  backdrop-filter: blur(10px);
-  background-color: rgba(10, 10, 10, 0.1);
-  /*
-  flex-basis: 25%;
-  */
-  width: 27%;
-  height: 50%;
-  padding: 1.5rem;
-  z-index: 1;
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.Percakapan h2 {
+.side-bar{
+  width: fit-content;
+}
+
+.teman {
+  flex-basis: 25%;
+  width: 0px;
+  height: 600px;
+  margin-top: 30px;
+}
+
+.teman h2 {
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: bold;
   color: #ff8c00;
 }
 
-.Percakapan h2:hover {
+.teman h2:hover {
   color: #7289da;
 }
 
-.Percakapan ul {
+.teman ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.Percakapan li {
+.teman li {
   margin-bottom: 10px;
 }
 
-.Percakapan a {
+.teman a {
   text-decoration: none;
   color: #fff;
 }
 
-.Percakapan a:hover {
+.teman a:hover {
   color: #7289da;
 }
 
+.profile-pic {
+  width: 100px; /* Adjust the size of the circle */
+  height: 100px;
+  border-radius: 50%; /* Makes the shape a circle */
+  overflow: hidden; /* Clips the image to the circle */
+  object-fit: cover; /* Maintains aspect ratio and covers the circle */
+
+}
+
+.user-profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
 .chat {
-  display: inline-block;
-  position: absolute;
   flex-basis: 50%;
-  padding: 7px;
-  
-  left: 28%;
-  width: 70%;
-  height: 100%;
-  /*border: 1px solid red;*/
-  z-index: 2;
+  margin-top: 50px;
 }
 
 .chat h2 {
-  padding: 0px;
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
 
 .chat-box {
-  overflow-y: auto;
+  overflow-y: scroll;
   height: 600px;
   background-color: #f2f2f2;
-  border-radius: 20px;
-  padding: 20px;
-  margin-top: 10px;
+  border-radius: 5px;
+  padding: 10px;
   margin-bottom: 10px;
-  
 }
 
 .chat-box p {
@@ -242,3 +235,74 @@ a {
 .form button:hover {
   background-color: #777;
 }
+
+.pop-up_pp {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999999;
+}
+
+#uploadPopupContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 340px;
+  background-color: white;
+  margin: auto;
+  margin-top: 200px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#uploadPopupContent span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+
+#uploadPopupContent h2 {
+  margin-bottom: 15px;
+}
+
+#uploadPopupContent input {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 35%;
+}
+
+#upload-button {
+  position: relative;
+  margin: auto;
+  padding: 0;
+}
+
+#uploadPopupContent img {
+
+  position: relative;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+

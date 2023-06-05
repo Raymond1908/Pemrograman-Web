@@ -20,14 +20,3 @@ function chating() {
     list.appendChild(entry);
     uchat.value= '';
 }
-
-//Ganti PP
-function showUploadPopup() {
-  document.getElementById('uploadPopup').style.display = 'block';
-}
-
-function hideUploadPopup() {
-  document.getElementById('uploadPopup').style.display = 'none';
-}
-
-
