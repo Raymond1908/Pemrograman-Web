@@ -14,7 +14,17 @@
     }
 
 
-
+    $sqlFile = "Database/admin_account.sql";
+        $sql = file_get_contents($sqlFile);
+        if (mysqli_multi_query($db, $sql)) {
+            do {
+                if ($result = mysqli_store_result($db)) {
+                    mysqli_free_result($result);
+                }
+            } while (mysqli_next_result($db));
+        } else {
+            echo "Error Mengimpor file SQL: " . mysqli_error($db);
+        }
     
     
     function registrasi($data) {
