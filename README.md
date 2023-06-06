@@ -1,6 +1,8 @@
 # ChatBubble
 Project Pemrograman Web Kelas A
-![ChatBubble Logo](https://github.com/Raymond1908/Pemrograman-Web/blob/main/Pemrograman%20Web/chatbubble.png)
+<p align="center">
+  <a href="#"><img width="350" height="350" src="https://github.com/Raymond1908/Pemrograman-Web/blob/main/Pemrograman%20Web/chatbubble.png"></a>
+</p>
 ## Fitur
 
 - Menampilkan pesan-pesan dalam bentuk bubble chat.
