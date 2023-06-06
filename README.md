@@ -15,7 +15,7 @@ Project Pemrograman Web Kelas A
 
 1. Clone Repository
    ```bash
-   git clone link_ke_repositori
+   git clone https://github.com/Raymond1908/Pemrograman-Web/
    
 2. Buat database dengan nama "useraccount" di phpmyadmin
    
