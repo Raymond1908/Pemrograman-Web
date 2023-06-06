@@ -34,8 +34,7 @@
     } else {
         echo "";
     }
-
-
+    
     
     function registrasi($data) {
         global $db;
