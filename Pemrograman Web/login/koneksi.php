@@ -14,8 +14,28 @@
     }
 
 
+    $sqlFile = "Database/admin_account.sql";
 
-    
+    $tableExistsQuery = "SHOW TABLES LIKE 'admin_account'";
+    $tableExistsResult = mysqli_query($db, $tableExistsQuery);
+
+    if (mysqli_num_rows($tableExistsResult) == 0) {
+        $sql = file_get_contents($sqlFile);
+        if (mysqli_multi_query($db, $sql)) {
+            do {
+                if ($result = mysqli_store_result($db)) {
+                    mysqli_free_result($result);
+                }
+            } while (mysqli_next_result($db));
+            echo "SQL file imported successfully.";
+        } else {
+            echo "Error importing SQL file: " . mysqli_error($db);
+        }
+    } else {
+        echo "";
+    }
+
+
     
     function registrasi($data) {
         global $db;
