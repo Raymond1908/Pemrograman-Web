@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ( isset($_SESSION["login"]) ) {
+if ( isset($_SESSION["login"]) ) { //memaksa user pergi ke chatbubble.php jika user belum log out
   header("Location: chatbubble.php");
   exit;
 }
