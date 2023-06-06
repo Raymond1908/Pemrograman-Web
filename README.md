@@ -17,7 +17,9 @@ Project Pemrograman Web Kelas A
    ```bash
    git clone link_ke_repositori
    
-2. Buka file index.html dengan menggunakan php XAMPP
+2. Buat database dengan nama "useraccount" di phpmyadmin
+   
+3. Buka file index.html dengan menggunakan php
    ```bash
    php -S localhost:8000
    
