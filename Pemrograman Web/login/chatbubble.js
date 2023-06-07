@@ -3,6 +3,7 @@ const getStartedBtn = document.getElementById("logout-btn");
 
 getStartedBtn.addEventListener("click", function() {
   window.location.href = "halamanlogin.php";
+  alert("Anda berhasil logout");
 });
 
 
