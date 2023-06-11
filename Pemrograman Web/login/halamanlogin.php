@@ -23,12 +23,13 @@ if( isset($_POST["login"])) {
     {
       $_SESSION["login"] = true;
       $_SESSION["username"] = $username;
-      header("location: chatbubble.php");
+      header("Location: chatbubble.php");
       exit;
     }
 
+  } else {
+    $error = true;
   }
-  $error = true;
 
 }
 
@@ -38,13 +39,12 @@ if( isset($_POST["register"]) ) {
     echo "<script>
           alert('user baru berhasil ditambahkan!')
           </script>";
+    header("Location: halamanlogin.php");
   } else {
     echo mysqli_error($db);
   }
 
 }
-
-
 
 ?>
 
@@ -66,12 +66,17 @@ if( isset($_POST["register"]) ) {
   </header>
   <main>
 
+    <p id="login-error-alert"
     <?php if( isset($error) ) : ?>
-      <p style="color: red; font-style:italic; text-align:center">username/password salah! </p>
+      > username/password salah! 
+    <?php else : ?>
+      style="visibility: hidden;">&nbsp;
     <?php endif;?>
+    </p>
 
     <div id="login-form" class="container">
       <h1 id="h1login" class="h1logres">Login</h1>
+      
       <form action="" method="post" onsubmit="validateForm(event)">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
@@ -97,6 +102,7 @@ if( isset($_POST["register"]) ) {
         </p>
       </form>
     </div>
+    
   </main>
   <script src="halamanlogin.js"></script>
 </body>
