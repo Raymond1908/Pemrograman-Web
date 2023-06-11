@@ -6,7 +6,9 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  
   background-color: #000;
   background-image: url('wallpaper.png');
   background-size: cover;
@@ -19,10 +21,11 @@ body {
 }
 
 main {
+  
   display: block;
   position: relative;
   
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 60px);
   top: 60px;
   margin-top: 60px auto 0px;
@@ -137,6 +140,7 @@ main {
 }
 */
 .side-bar{
+  margin: 0;
   display: inline-flex;
   position: relative;
   flex-direction: column;
@@ -153,7 +157,7 @@ main {
   /*
   flex-basis: 25%;
   */
-  width: 250px;
+  width: inherit;
   height: 70%;
   padding: 1.5rem;
   z-index: 1;
@@ -196,7 +200,7 @@ main {
   justify-content: center;
   align-items: center;
   height: fit-content;
-  width: 250px;
+  width: inherit;
   z-index: 999999;
 }
 
@@ -222,8 +226,8 @@ main {
   flex-basis: 50%;
   padding: 7px;
   
-  left: 28%;
-  width: 100%;
+  /*left: 28%;*/
+  width: calc(100vw - 250px);
   height: 100%;
   /*border: 1px solid red;*/
   z-index: 2;
@@ -238,7 +242,7 @@ main {
 
 .chat-box {
   overflow-y: auto;
-  height: 600px;
+  height: calc(100% - 85px );
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 20px;
