@@ -5,7 +5,6 @@
     exit;
   }
 
-
   //koneksi php
   require 'koneksi.php';
   
@@ -42,11 +41,8 @@
       ";
       
     }
-
   }
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -56,9 +52,8 @@
     <title>ChatBubble</title>
     <link rel="icon" href="/chatbubble.png">
     <link href="chatbubble.css" rel="stylesheet" type="text/css">
-    
   </head>
-  
+
   <body>
     <header class="navbar">
       <nav id="logout">
@@ -80,9 +75,8 @@
     </header>
     
     <main>
-
       <div class="side-bar">
-        <div class="teman">
+        <div class="Percakapan">
           <h2>Teman</h2>
           <ul>
             <li><a href="#">Raymond</a></li>
@@ -98,7 +92,7 @@
       </div>
       
       <div class="chat">
-        <h2>General Chat</h2>
+        <h2>Nama User/grup tujuan</h2>
         <div class="chat-box">
           <p><strong>Raymond:</strong> Hai, kalian sedang apa?</p>
           <p><strong>Ariel:</strong> Sedang bersantai</p>

@@ -19,16 +19,30 @@ body {
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  display: block;
+  position: relative;
+  
+  width: 100vw;
+  height: calc(100vh - 60px);
+  top: 60px;
+  margin-top: 60px auto 0px;
+  /*padding: 20px;*/
+  
+  
+  justify-content: space-between;
+  /*margin-top: 20px;*/
+  
 }
 
 header {
+  /*
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  */
+  position: sticky;
+  padding: 0 2rem;
 }
 
 .navbar {
@@ -115,52 +129,75 @@ a {
 .search-box i {
   color: #888;
 }
-
+/*
 main {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
+*/
 .side-bar{
-  width: fit-content;
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
 }
 
-.teman {
+.Percakapan {
+  display: block;
+  position: relative;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 10, 10, 0.1);
+  /*
   flex-basis: 25%;
-  width: 0px;
-  height: 600px;
-  margin-top: 30px;
+  */
+  width: 250px;
+  height: 70%;
+  padding: 1.5rem;
+  z-index: 1;
 }
 
-.teman h2 {
+.Percakapan h2 {
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: bold;
   color: #ff8c00;
 }
 
-.teman h2:hover {
+.Percakapan h2:hover {
   color: #7289da;
 }
 
-.teman ul {
+.Percakapan ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.teman li {
+.Percakapan li {
   margin-bottom: 10px;
 }
 
-.teman a {
+.Percakapan a {
   text-decoration: none;
   color: #fff;
 }
 
-.teman a:hover {
+.Percakapan a:hover {
   color: #7289da;
+}
+
+.user-profile {
+  display: flex;
+  position: static;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: 250px;
+  z-index: 999999;
 }
 
 .profile-pic {
@@ -180,22 +217,32 @@ main {
 }
 
 .chat {
+  display: inline-block;
+  position: absolute;
   flex-basis: 50%;
-  margin-top: 50px;
+  padding: 7px;
+  
+  left: 28%;
+  width: 100%;
+  height: 100%;
+  /*border: 1px solid red;*/
+  z-index: 2;
 }
 
 .chat h2 {
+  padding: 0px;
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
 
 .chat-box {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 600px;
   background-color: #f2f2f2;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 

@@ -23,8 +23,5 @@ const loginForm = document.querySelector('#login-form');
 
 function showregisterform() {
     loginForm.classList.toggle('close');
-    
-    
     registerForm.classList.toggle('open');
-    
 }
