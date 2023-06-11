@@ -44,4 +44,3 @@ Jika Anda ingin berkontribusi pada proyek ini, Anda dapat mengikuti langkah-lang
    
 6. Buat pull request ke repository utama
 
-tes commit
