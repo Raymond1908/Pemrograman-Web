@@ -62,7 +62,7 @@ if( isset($_POST["register"]) ) {
 
 <body>
   <header>
-    <h1 id="loginHeader"><a href="../index.html">ChatBubble</a></h1>
+    <h1 id="loginHeader"><a href="../index.php">ChatBubble</a></h1>
   </header>
   <main>
 
