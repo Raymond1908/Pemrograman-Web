@@ -77,7 +77,7 @@
     <main>
       <div class="side-bar">
         <div class="Percakapan">
-          <h2>Teman</h2>
+          <h2>Percakapan</h2>
           <ul>
             <li><a href="#">Raymond</a></li>
             <li><a href="#">Ariel</a></li>

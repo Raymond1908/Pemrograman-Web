@@ -195,11 +195,12 @@ main {
 
 .user-profile {
   display: flex;
-  position: static;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: fit-content;
+  padding-top: 20px;
   width: inherit;
   z-index: 999999;
 }
@@ -207,6 +208,7 @@ main {
 .profile-pic {
   width: 100px; /* Adjust the size of the circle */
   height: 100px;
+  
   border-radius: 50%; /* Makes the shape a circle */
   overflow: hidden; /* Clips the image to the circle */
   object-fit: cover; /* Maintains aspect ratio and covers the circle */
