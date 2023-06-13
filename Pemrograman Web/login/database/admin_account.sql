@@ -33,16 +33,6 @@ CREATE TABLE `admin_account` (
   `picture` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `admin_account`
---
-
-INSERT INTO `admin_account` (`username`, `password`, `picture`) VALUES
-('ariel2', '$2y$10$F9KHZRMFJO81s/b4J402BuuNIksuJVS96MKJVzCdP8v36itSoRtbS', 'default.jpg'),
-('ariel3', '$2y$10$oAonTVhEA8G/5yfKYAENDuomTGIWhRWD7eVmwq912ovHfoZoSLSY6', 'default.jpg'),
-('devariel', '$2y$10$w6mRIgC5MC.hxSts8d1acewKNrR18MzoGYiuZirNQE9bFK9zm92aq', 'CB_img6487eb994cf6f.png'),
-('tes', '$2y$10$DPHA4GCYfFD1/m04NuduMezshm92G0jJBqeYEHw4GT5m1PJQSdcOm', 'default.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -94,29 +84,6 @@ CREATE TABLE `message` (
   `waktu_terkirim` datetime NOT NULL DEFAULT current_timestamp(),
   `isi_media` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `message`
---
-
-INSERT INTO `message` (`message_id`, `username`, `isi_pesan`, `waktu_terkirim`, `isi_media`) VALUES
-(1, 'ariel2', 'lorem ipsum new text', '2023-06-13 12:36:35', NULL),
-(2, 'devariel', 'Ya ya ouwteiwei', '2023-06-13 12:36:35', NULL),
-(4, 'devariel', ',', '2023-06-13 15:10:13', NULL),
-(5, 'devariel', 'tes', '2023-06-13 15:13:16', NULL),
-(6, 'devariel', 'tes123', '2023-06-13 15:13:50', NULL),
-(7, 'ariel3', 'halo', '2023-06-13 15:15:53', NULL),
-(8, 'ariel3', 'selamat malam', '2023-06-13 19:15:06', NULL),
-(9, 'ariel3', 'selamat malam', '2023-06-13 19:15:38', NULL),
-(10, 'devariel', 'selamat beristirahat sahabatku', '2023-06-13 19:16:17', NULL),
-(11, 'ariel3', 'selamat malam', '2023-06-13 19:16:43', NULL),
-(12, 'devariel', 'iyiuyioiyu', '2023-06-13 19:24:49', NULL),
-(13, 'devariel', 'iyiuyioiyu', '2023-06-13 19:25:00', NULL),
-(14, 'ariel3', 'selamat malam', '2023-06-13 19:25:24', NULL),
-(15, 'ariel3', 'selamat malam', '2023-06-13 19:25:54', NULL),
-(16, 'devariel', 'dlj', '2023-06-13 19:27:15', NULL),
-(17, 'ariel3', 'selamat malam', '2023-06-13 19:27:26', NULL),
-(18, 'devariel', 'dlj', '2023-06-13 19:27:35', NULL);
 
 --
 -- Indexes for dumped tables
