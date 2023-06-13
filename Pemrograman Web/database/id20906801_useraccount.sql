@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 13, 2023 at 01:29 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: localhost:3306
+-- Generation Time: Jun 13, 2023 at 02:32 PM
+-- Server version: 10.5.20-MariaDB
+-- PHP Version: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `useraccount`
+-- Database: `id20906801_useraccount`
 --
 
 -- --------------------------------------------------------
@@ -32,6 +32,16 @@ CREATE TABLE `admin_account` (
   `password` varchar(256) DEFAULT NULL,
   `picture` varchar(64) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_account`
+--
+
+INSERT INTO `admin_account` (`username`, `password`, `picture`) VALUES
+('ariell', '$2y$10$J0imad655nHzoGFazgCi/e7j8dc/oiqSeQy0h9XsIOC9SlenlMNvW', 'default.jpg'),
+('bravio', '$2y$10$6dD9zdfZfjCiy9ZywC1CJOV.mQMdTW8Rj/lOv/0nz9wUqhqUS8yH6', 'default.jpg'),
+('mikael pemba', '$2y$10$kl2TURA2PnFWLS/4grORae3Lc9MBp6D/.xDdVuQVKq8Mut6owhumK', 'default.jpg'),
+('raymond', '$2y$10$oFN9jQhOxB/C5IhOqnyMIONUoPxLCNYr.SAZb6keQJmcB9.lk2fnO', 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -86,6 +96,16 @@ CREATE TABLE `message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`message_id`, `username`, `isi_pesan`, `waktu_terkirim`, `isi_media`) VALUES
+(60, 'Bravio', 'Selamat malam kawan-kawan', '2023-06-13 14:28:36', NULL),
+(61, 'raymond', 'Halo, apa kabar', '2023-06-13 14:29:34', NULL),
+(63, 'ariell', 'Selamat malam bravio, selamat beristirahat', '2023-06-13 14:30:41', NULL),
+(64, 'Mikael Pemba', 'hello bang', '2023-06-13 14:30:43', NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -129,24 +149,7 @@ ALTER TABLE `conversation`
 -- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `group_member`
---
-ALTER TABLE `group_member`
-  ADD CONSTRAINT `group_member_ibfk_1` FOREIGN KEY (`username`) REFERENCES `admin_account` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `group_member_ibfk_2` FOREIGN KEY (`conversation_id`) REFERENCES `conversation` (`conversation_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `message`
---
-ALTER TABLE `message`
-  ADD CONSTRAINT `message_ibfk_1` FOREIGN KEY (`username`) REFERENCES `admin_account` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
