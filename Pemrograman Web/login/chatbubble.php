@@ -116,7 +116,7 @@
             ?>
             
             <!--<img id="previewImage" alt="Preview" src="../anggota/ariel.jpg">-->
-            <img id="PPPreview" src="UserProfile/<?= $account['picture']; ?>" width="200px">
+            <img id="PPPreview" class="pp-preview" src="UserProfile/<?= $account['picture']; ?>" width="200px">
             <form action="" method="POST" enctype="multipart/form-data"> 
               <input name="gambar" type="file" id="fileInput">
               <br>
