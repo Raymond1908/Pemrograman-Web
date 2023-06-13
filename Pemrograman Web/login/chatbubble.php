@@ -11,7 +11,6 @@
   $username = $_SESSION["username"];
    
   $account = query("SELECT * FROM admin_account WHERE username = '$username'")[0];
-  $globalM = query("SELECT * FROM `message`");
 
   //var_dump($account["picture"]); die;
   $_SESSION["picture"] = $account["picture"];
@@ -63,6 +62,7 @@
       
     }
   }
+$globalM = query("SELECT * FROM `message`");
 ?>
 
 <!DOCTYPE html>
