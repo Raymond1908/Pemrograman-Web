@@ -12,18 +12,6 @@ Project Pemrograman Web Kelas A
 ## Website
 
 https://chatbubbleproject.000webhostapp.com/
-
-## Instalasi
-
-1. Clone Repository
-   ```bash
-   git clone https://github.com/Raymond1908/Pemrograman-Web/
-   
-2. Buat database dengan nama "useraccount" di phpmyadmin
-   
-3. Buka file index.html dengan menggunakan php
-   ```bash
-   php -S localhost:8000
    
 ## Kontribusi
 Jika Anda ingin berkontribusi pada proyek ini, Anda dapat mengikuti langkah-langkah berikut:
