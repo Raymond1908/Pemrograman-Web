@@ -115,7 +115,7 @@
       </div>
       
       <div class="chat">
-        <h2>Nama User/grup tujuan</h2>
+        <h2>Global chat</h2>
         <div class="chat-box">
 
           <?php $i = 1; ?>
