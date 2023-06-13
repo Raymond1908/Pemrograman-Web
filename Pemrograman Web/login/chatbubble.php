@@ -11,15 +11,38 @@
   $username = $_SESSION["username"];
    
   $account = query("SELECT * FROM admin_account WHERE username = '$username'")[0];
+  $globalM = query("SELECT * FROM `message`");
+
   //var_dump($account["picture"]); die;
   $_SESSION["picture"] = $account["picture"];
 
   $errormsg = "";
 
-  if( isset($_POST["change-pp"]) ) {
+  if( isset($_POST["sendM"]) ) {
+
+    if( sendM($_SESSION, $_POST["yourMessage"]) > 0) {
+      echo "
+
+        <script>
+          alert('pesan berhasil dikirim');
+          hideUploadPopup();
+        </script>
+
+      ";
+    } else {
+      echo "
+        <script>
+          alert('pesan gagal dikirim');
+          hideUploadPopup();
+        </script>
+      ";
+    }
+  }
+
+  if( isset($_POST["change-pp"]) ) { //implementasi upload pada fitur ganti foto profil
     //var_dump(add($_SESSION)); die;
     
-    if( add($_SESSION) > 0 ) {
+    if( add($_SESSION) > 0 ) { //jika fungsi add berhasil, maka script dibawah akan dijalankan
       echo "
 
         <script>
@@ -92,16 +115,23 @@
       </div>
       
       <div class="chat">
-        <h2>Nama User/grup tujuan</h2>
+        <h2>Global chat</h2>
         <div class="chat-box">
-          <p><strong>Raymond:</strong> Hai, kalian sedang apa?</p>
-          <p><strong>Ariel:</strong> Sedang bersantai</p>
-          <p><strong>Mikael:</strong> Ada yang ingin bermain game?</p>
-          <p><strong>Bravio:</strong> Ayo</p>
+
+          <?php $i = 1; ?>
+          <?php foreach( $globalM as $row ) : ?>
+            <?php if( $username == $row["username"] ) : ?>
+              <p><strong style="color:green;">You:</strong> <?= $row["isi_pesan"] ?></p>
+              <?php continue; ?>
+            <?php endif; ?>
+              <p><strong><?= $row["username"] ?>:</strong> <?= $row["isi_pesan"] ?></p>
+            <?php $i++; ?>
+          <?php endforeach; ?>
+          
         </div>
-        <form class="form" onsubmit="return false;">
-          <input id="yourchat" type="text" placeholder="Type your message..." value=''>
-          <button type='reset' onclick="chating()">Send</button>
+        <form class="form" action="" method="post">          <!-- onsubmit="return false;" -->
+          <input  name="yourMessage" type="text" placeholder="Type your message..." required>
+          <button name="sendM" type='submit' onclick="chating()" >Send</button> <!-- Write your comments here -->
         </form>
       </div>
 

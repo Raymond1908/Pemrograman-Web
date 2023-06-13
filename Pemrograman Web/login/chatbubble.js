@@ -8,6 +8,7 @@ getStartedBtn.addEventListener("click", function() {
 
 
 //chat
+/*
 var list = document.querySelector('.chat-box');
 
 function chating() {
@@ -21,6 +22,7 @@ function chating() {
     list.appendChild(entry);
     uchat.value= '';
 }
+*/
 
 //Ganti PP
 function showUploadPopup() {

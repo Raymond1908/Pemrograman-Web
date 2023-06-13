@@ -13,7 +13,7 @@
         return $rows;
     }
 
-
+    #buat table database
     $sqlFile = "Database/admin_account.sql";
 
     $tableExistsQuery = "SHOW TABLES LIKE 'admin_account'";
@@ -118,6 +118,7 @@
         global $db;
 
         $username = $data["username"];
+        
         if($data["picture"] !== "default.jpg") {
             $gambarLama = $data["picture"];
         }
@@ -145,5 +146,16 @@
         
         return mysqli_affected_rows($db);
     } 
+
+    function sendM( $data, $message ) {
+        global $db;
+        $message = mysqli_real_escape_string($db, $message);
+
+        $username = $data["username"];
+        
+
+        mysqli_query($db, "INSERT INTO message(username, isi_pesan) VALUES('$username', '$message')");
+
+    }
 
 ?>
