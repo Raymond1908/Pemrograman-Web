@@ -13,7 +13,7 @@
         return $rows;
     }
 
-
+    #buat table database
     $sqlFile = "Database/admin_account.sql";
 
     $tableExistsQuery = "SHOW TABLES LIKE 'admin_account'";
