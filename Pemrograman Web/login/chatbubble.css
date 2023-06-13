@@ -298,6 +298,10 @@ main {
   z-index: 999999999;
 }
 
+.pp-preview {
+    border-radius: 50%;
+}
+
 #uploadPopupContent {
   position: relative;
   display: flex;
