@@ -118,6 +118,7 @@
         global $db;
 
         $username = $data["username"];
+        
         if($data["picture"] !== "default.jpg") {
             $gambarLama = $data["picture"];
         }
@@ -146,9 +147,12 @@
         return mysqli_affected_rows($db);
     } 
 
-    function sendM( $data ) {
+    function sendM( $data, $message ) {
         global $db;
-        echo var_dump($data); die;
+        
+        $username = $data["username"];
+        
+
         $sendedM = mysqli_real_escape_string($db, $data["sendM"]);
         mysqli_query($db, "INSERT INTO message(username, isi_pesan) VALUES('$username', '$password', ')");
 

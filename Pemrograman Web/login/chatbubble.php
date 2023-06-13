@@ -19,7 +19,8 @@
   $errormsg = "";
 
   if( isset($_POST["sendM"]) ) {
-    if( sendM($_SESSION) > 0) {
+    var_dump($_POST["sendM"]); die;
+    if( sendM($_SESSION, $_POST) > 0) {
       echo "
 
         <script>
@@ -128,8 +129,8 @@
           <?php endforeach; ?>
           
         </div>
-        <form class="form" onsubmit="return false;" method="post">
-          <input  id="yourchat" type="text" placeholder="Type your message..." value=''>
+        <form class="form" action="" method="post">          <!-- onsubmit="return false;" -->
+          <input  name="yourM" type="text" placeholder="Type your message..." required>
           <button name="sendM" type='submit' onclick="chating()" >Send</button> <!-- Write your comments here -->
         </form>
       </div>
