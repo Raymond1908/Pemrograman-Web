@@ -149,12 +149,12 @@
 
     function sendM( $data, $message ) {
         global $db;
-        
+        $message = mysqli_real_escape_string($db, $message);
+
         $username = $data["username"];
         
 
-        $sendedM = mysqli_real_escape_string($db, $data["sendM"]);
-        mysqli_query($db, "INSERT INTO message(username, isi_pesan) VALUES('$username', '$password', ')");
+        mysqli_query($db, "INSERT INTO message(username, isi_pesan) VALUES('$username', '$message')");
 
     }
 

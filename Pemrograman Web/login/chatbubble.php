@@ -19,8 +19,8 @@
   $errormsg = "";
 
   if( isset($_POST["sendM"]) ) {
-    var_dump($_POST["sendM"]); die;
-    if( sendM($_SESSION, $_POST) > 0) {
+
+    if( sendM($_SESSION, $_POST["yourMessage"]) > 0) {
       echo "
 
         <script>
@@ -130,7 +130,7 @@
           
         </div>
         <form class="form" action="" method="post">          <!-- onsubmit="return false;" -->
-          <input  name="yourM" type="text" placeholder="Type your message..." required>
+          <input  name="yourMessage" type="text" placeholder="Type your message..." required>
           <button name="sendM" type='submit' onclick="chating()" >Send</button> <!-- Write your comments here -->
         </form>
       </div>
