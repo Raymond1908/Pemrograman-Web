@@ -24,7 +24,6 @@
       echo "
 
         <script>
-          alert('pesan berhasil dikirim');
           hideUploadPopup();
         </script>
 
@@ -32,7 +31,6 @@
     } else {
       echo "
         <script>
-          alert('pesan gagal dikirim');
           hideUploadPopup();
         </script>
       ";
