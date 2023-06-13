@@ -130,7 +130,7 @@
         </div>
         <form class="form" onsubmit="return false;" method="post">
           <input  id="yourchat" type="text" placeholder="Type your message..." value=''>
-          <button name="sendM" type='reset' onclick="chating()" >Send</button> <!-- Write your comments here -->
+          <button name="sendM" type='submit' onclick="chating()" >Send</button> <!-- Write your comments here -->
         </form>
       </div>
 

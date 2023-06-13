@@ -148,7 +148,7 @@
 
     function sendM( $data ) {
         global $db;
-        var_dump($data); die;
+        echo var_dump($data); die;
         $sendedM = mysqli_real_escape_string($db, $data["sendM"]);
         mysqli_query($db, "INSERT INTO message(username, isi_pesan) VALUES('$username', '$password', ')");
 
